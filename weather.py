@@ -10,7 +10,7 @@ api_url = 'https://notify-api.line.me/api/notify'
 def main_night():
     hourly_time=[]
     hourly_rain=[]
-    weather_json=req.get("https://api.open-meteo.com/v1/forecast?latitude=35.30&longitude=136.80&timezone=Asia%2FTokyo&daily=temperature_2m_max&daily=temperature_2m_min&daily=precipitation_probability_mean&daily=weathercode&daily=windspeed_10m_max&daily=winddirection_10m_dominant&hourly=rain",verify=False)
+    weather_json=req.get("https://api.open-meteo.com/v1/forecast?latitude=your latitude&longitude=your longitude&timezone=Asia%2FTokyo&daily=temperature_2m_max&daily=temperature_2m_min&daily=precipitation_probability_mean&daily=weathercode&daily=windspeed_10m_max&daily=winddirection_10m_dominant&hourly=rain",verify=False)
     weather_json=weather_json.json()
 
     rain_mm=weather_json["hourly_units"]["rain"]
